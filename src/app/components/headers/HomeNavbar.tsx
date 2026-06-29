@@ -60,7 +60,24 @@ export function HomeNavbar() {
           </Stack>
         </Stack>
 
-        <Stack>DETAIL</Stack>
+        <Stack className="header-frame">
+          <Stack className="detail">
+            <Box className={"head-main-txt"}>
+              World's Most Delicious Cousine
+            </Box>
+            <Box className={"wel-txt"}>The Choice, not just a choice</Box>
+            <Box className={"service-txt"}>24 hours service</Box>
+            <Box className={"singup"}></Box>
+            {!authMember ? (
+              <Button variant={"contained"} className={"singup-button"}>
+                SING UP
+              </Button>
+            ) : null}
+          </Stack>
+          <Box className="logo-frame">
+            <div className="logo-img"></div>
+          </Box>
+        </Stack>
       </Container>
     </div>
   );

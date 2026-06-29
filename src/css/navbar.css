@@ -71,3 +71,95 @@
 .home-navbar .hover-line:hover:after {
   transform: scaleX(1);
 }
+
+.home-navbar .navbar-container .header-frame {
+  margin-top: 142px;
+  height: 462px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.home-navbar .navbar-container .header-frame .detail {
+  width: 510px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-navbar .navbar-container .header-frame .detail .head-main-txt {
+  width: 450px;
+  height: 150px;
+  font-family: "Roboto Serif";
+  font-style: normal;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.75%;
+  text-align: left;
+
+  color: rgba(248, 248, 255, 1);
+}
+
+.home-navbar .navbar-container .header-frame .detail .wel-txt {
+  width: 510px;
+  height: 42px;
+  font-family: "Roboto Serif";
+  font-style: normal;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 42px;
+  letter-spacing: -0.54%;
+  text-align: left;
+
+  color: rgba(215, 182, 134, 1);
+}
+
+.home-navbar .navbar-container .header-frame .detail .service-txt {
+  margin-top: 23px;
+  width: 153px;
+  height: 23px;
+
+  font-family: "Roboto Serif";
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.3%;
+  text-align: left;
+
+  color: rgba(213, 213, 213, 1);
+}
+
+.home-navbar .navbar-container .detail .singup {
+  margin-top: 73px;
+}
+
+.home-navbar .navbar-container .detail .singup-button {
+  width: 210px;
+  height: 60px;
+  border-radius: 4px;
+  background: #1976d2;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  color: rgba(248, 248, 255, 1);
+}
+
+.home-navbar .navbar-container .logo-frame {
+  margin-top: 43px;
+  width: 690px;
+  height: 419px;
+}
+
+.home-navbar .navbar-container .logo-img {
+  width: 100%;
+  height: 100%;
+  background: url("/public/img/logo.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: invert(28%);
+}
