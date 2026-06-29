@@ -67,10 +67,10 @@ export function HomeNavbar() {
             </Box>
             <Box className={"wel-txt"}>The Choice, not just a choice</Box>
             <Box className={"service-txt"}>24 hours service</Box>
-            <Box className={"singup"}></Box>
+            <Box className={"signup"}></Box>
             {!authMember ? (
-              <Button variant={"contained"} className={"singup-button"}>
-                SING UP
+              <Button variant={"contained"} className={"signup-button"}>
+                SIGN UP
               </Button>
             ) : null}
           </Stack>
