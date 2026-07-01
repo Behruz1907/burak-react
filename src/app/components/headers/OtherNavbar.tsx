@@ -4,16 +4,16 @@ import Basket from "./Basket";
 
 export default function OtherNavbar() {
   const authMember = null;
+
   return (
     <div className="other-navbar">
       <Container className="navbar-container">
         <Stack className="menu">
           <Box>
             <NavLink to="/">
-              <img className="brand-logo" src="/icons/burak.svg"></img>
+              <img className="brand-logo" src="/icons/bumarak.svg" />
             </NavLink>
           </Box>
-
           <Stack className="links">
             <Box className={"hover-line"}>
               <NavLink to="/">Home</NavLink>
@@ -42,8 +42,8 @@ export default function OtherNavbar() {
                 Help
               </NavLink>
             </Box>
-            {/* BASKET */}
             <Basket />
+
             {!authMember ? (
               <Box>
                 <Button variant="contained" className="login-button">
