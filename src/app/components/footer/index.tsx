@@ -20,7 +20,7 @@ export default function Footer() {
         <Stack flexDirection={"row"} sx={{ mt: "94px" }}>
           <Stack flexDirection={"column"} style={{ width: "340px" }}>
             <Box>
-              <img width={"100px"} src={"/icons/bumarak.svg"} />
+              <img width={"100px"} src={"/icons/burak.svg"} />
             </Box>
             <Box className={"foot-desc-txt"}>
               Focusing on the gourmet Turkish breakfast as well as the youth
@@ -61,7 +61,7 @@ export default function Footer() {
                   </Box>
                   <Box className={"find-us"}>
                     <span>P.</span>
-                    <div>+971 4 554 7777</div>
+                    <div>+82 0100101010</div>
                   </Box>
                   <Box className={"find-us"}>
                     <span>E.</span>
