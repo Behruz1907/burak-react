@@ -23,7 +23,7 @@ class Test extends Component {
 
   componentDidMount() {
     console.log("componentDidMount");
-    // runs after first render => RETRIEVE DATA FROM BACKEND SERVER
+    // runs after first render => RETRIEVE DATA FROM BACKEND SERVER qanaqa data??
   }
 
   componentWillUnmount() {
