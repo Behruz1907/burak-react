@@ -31,7 +31,7 @@ class Test extends Component {
     // runs before component unmount
   }
 
-  componentDidUpdate() {} // array dependency ichidagi malumot bu
+  componentDidUpdate() {} // array dependency ichidagi malumot bu  componentDidUpdate()
 
   render() {
     return (
