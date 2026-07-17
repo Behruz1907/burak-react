@@ -13,7 +13,3 @@ test("renders learn react link", () => {
 
   expect(getByText(/learn/i)).toBeInTheDocument();
 });
-
-function expect(arg0: any) {
-  throw new Error("Function not implemented.");
-}
