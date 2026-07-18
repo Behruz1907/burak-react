@@ -5,7 +5,7 @@ import { Product } from "./product";
 
 // 2-target orented type integration
 export interface AppRootState {
-  hopmePage: HomePageState;
+  homePage: HomePageState;
   // productsPage: ProductsPageState;
 }
 

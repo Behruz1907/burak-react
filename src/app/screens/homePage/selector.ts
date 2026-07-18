@@ -1,5 +1,6 @@
 import { createSelector } from "reselect";
 import HomePage from ".";
+import { AppRootState } from "../../../lib/types/screen";
 
 const selectHomePage = (state: AppRootState) => state.homePage;
 export const retrievePopularDishes = createSelector(
