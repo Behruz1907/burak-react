@@ -30,6 +30,7 @@ export default function HomePage() {
   useEffect(() => {
     // Backend server data fetch => Data
     const product = new ProductService();
+
     product
       .getProducts({
         page: 1,
