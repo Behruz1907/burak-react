@@ -50,10 +50,15 @@ export default function Products(props: ProductsProps) {
   const history = useHistory();
 
   useEffect(() => {
+    // 1-JARAYON: ComponentDidMOunt
     const product = new ProductService();
+    // 2-JARAYON: Backend Data Fetch
     product
       .getProducts(productSearch)
-      .then((data) => setProducts(data))
+      .then((data) =>
+        // 3 JARAYON:  ESHMAT SLICE GA berebmiz
+        setProducts(data),
+      )
       .catch((err) => console.log(err));
   }, [productSearch]);
 
@@ -63,6 +68,8 @@ export default function Products(props: ProductsProps) {
       setProductSearch({ ...productSearch });
     }
   }, [searchText]);
+
+  // 3 JARAYON: Toshmat Selector
 
   /** HANDLERS*/
 

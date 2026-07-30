@@ -2,15 +2,18 @@ import { useState } from "react";
 import { CartItem } from "../../lib/types/search";
 
 const useBasket = () => {
+  // birinchi cartItemsni qiymati bo'sh array bolmedi endi uni local stordan olib kelamiz
   const cartJson: string | null = localStorage.getItem("cartData");
   const currentCart = cartJson ? JSON.parse(cartJson) : [];
   const [cartItems, setCartItems] = useState<CartItem[]>(currentCart);
 
   const onAdd = (input: CartItem) => {
+    // biz basketga add qilmoqchi bolgan prodct basketda mavjudmi
     const exist: any = cartItems.find(
       (item: CartItem) => item._id === input._id,
     );
     if (exist) {
+      // isso bolsa
       const cartUpdate = cartItems.map((item: CartItem) =>
         item._id === input._id
           ? { ...exist, quantity: exist.quantity + 1 }
@@ -20,6 +23,7 @@ const useBasket = () => {
       setCartItems(cartUpdate);
       localStorage.setItem("cartData", JSON.stringify(cartUpdate));
     } else {
+      // obso bolsa
       const cartUpdate = [...cartItems, { ...input }];
       setCartItems(cartUpdate);
       localStorage.setItem("cartData", JSON.stringify(cartUpdate));
