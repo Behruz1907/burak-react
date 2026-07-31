@@ -5,7 +5,7 @@ import useBasket from "./useBasket";
 interface GlobalInterface {
   authMember: Member | null;
   setAuthMember: (member: Member | null) => void;
-  basket: any;
+  basket: ReturnType<typeof useBasket>;
 }
 
 export const GlobalContext = createContext<GlobalInterface | undefined>(

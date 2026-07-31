@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
+import { useGlobals } from "../../hooks/useGlobals";
 
 import { setRestaurant, setChosenProduct } from "./slice";
 import { Dispatch } from "@reduxjs/toolkit";
@@ -44,12 +45,13 @@ const restaurantRetriever = createSelector(
   }),
 );
 
-interface ChosenProductProps {
-  onAdd: (item: CartItem) => void;
-}
+interface ChosenProductProps {}
 
-export default function ChosenProduct(props: ChosenProductProps) {
-  const { onAdd } = props;
+export default function ChosenProduct() {
+  const {
+    basket: { onAdd },
+  } = useGlobals();
+
   const { productId } = useParams<{ productId: string }>();
   const { setRestaurant, setChosenProduct } = actionDispatch(useDispatch());
   const { chosenProduct } = useSelector(chosenProductRetriever);
