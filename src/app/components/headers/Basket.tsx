@@ -16,11 +16,11 @@ import OrderService from "../../services/OrderService";
 interface BasketProps {}
 
 export default function Basket(props: BasketProps) {
-  const basket = useGlobals();
   const {
+    authMember,
+    setOrderBuilder,
     basket: { cartItems, onAdd, onRemove, onDelete, onDeleteAll },
   } = useGlobals();
-  const { authMember } = useGlobals();
   const history = useHistory();
   const itemsPrice: number = cartItems.reduce(
     (a: number, c: CartItem) => a + c.quantity * c.price,
@@ -52,7 +52,7 @@ export default function Basket(props: BasketProps) {
 
       onDeleteAll();
 
-      // REFRESH VIA CONTEXT
+      setOrderBuilder(new Date());
       history.push("/orders");
     } catch (err) {
       console.log(err);

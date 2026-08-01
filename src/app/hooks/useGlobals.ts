@@ -6,6 +6,8 @@ interface GlobalInterface {
   authMember: Member | null;
   setAuthMember: (member: Member | null) => void;
   basket: ReturnType<typeof useBasket>;
+  orderBuilder: Date;
+  setOrderBuilder: (input: Date) => void;
 }
 
 export const GlobalContext = createContext<GlobalInterface | undefined>(

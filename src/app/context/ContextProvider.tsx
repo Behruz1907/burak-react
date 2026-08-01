@@ -17,6 +17,8 @@ const ContextProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
       : null,
   );
 
+  const [orderBuilder, setOrderBuilder] = useState<Date>(new Date());
+
   const basket = useBasket();
 
   return (
@@ -25,6 +27,8 @@ const ContextProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
         authMember,
         setAuthMember,
         basket,
+        orderBuilder,
+        setOrderBuilder,
       }}
     >
       {children}
