@@ -104,7 +104,7 @@ class MemberService {
         data: formData,
         withCredentials: true,
         headers: {
-          "Content-Type": "multipart/form-data:",
+          "Content-Type": "multipart/form-data",
         },
       });
 
